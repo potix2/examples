@@ -19,7 +19,7 @@ By the end of this tutorial, you should learn how to:
 *   Spawn up a Jupyter Notebook on the cluster
 *   Spawn up a shared-persistent storage across the cluster to store large
     datasets
-*   Train a Sequence-to-Sequence model using TensorFlow and GPUs on the cluster
+*   Train a Sequence-to-Sequence model using TensorFlow on the cluster
 *   Serve the model using [Seldon Core](https://github.com/SeldonIO/seldon-core/)
 *   Query the model from a simple front-end application
 
