@@ -12,22 +12,22 @@ In this part, you will setup kubeflow on an existing kubernetes cluster.
 
 ## Kubeflow setup
 
-Refer to the [user
-guide](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md) for
+Refer to the [Getting 
+Started Guide](https://www.kubeflow.org/docs/started/getting-started/) for
 detailed instructions on how to setup kubeflow on your kubernetes cluster.
 Specifically, complete the following sections:
 
 *    [Deploy
-Kubeflow](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md#deploy-kubeflow)
+Kubeflow](https://www.kubeflow.org/docs/started/getting-started/#quick-start)
     *   The `ks-kubeflow` directory can be used instead of creating a ksonnet
         app from scratch.
     *   If you run into
-        [API rate limiting errors](https://github.com/ksonnet/ksonnet/blob/master/docs/troubleshooting.md#github-rate-limiting-errors),
+        [API rate limiting errors](https://www.kubeflow.org/docs/guides/troubleshooting/#403-api-rate-limit-exceeded-error),
         ensure you have a `${GITHUB_TOKEN}` environment variable set.
     *   If you run into
-        [RBAC permissions issues](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md#rbac-clusters)
+        [RBAC permissions issues](https://www.kubeflow.org/docs/guides/troubleshooting/#rbac-clusters)
         running `ks apply` commands, be sure you have created a `cluster-admin` ClusterRoleBinding for your username.
-*    [Setup a persistent disk](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md#advanced-customization)
+*    [Setup a persistent disk](https://www.kubeflow.org/docs/guides/advanced/#persistent-disks)
     *   We need a shared persistent disk to store our training data since
         containers' filesystems are ephemeral and don't have a lot of storage space.
     *   For this example, provision a `10GB` cluster-wide shared NFS mount with the
@@ -36,7 +36,7 @@ Kubeflow](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md#deploy-
         picks up the NFS mount. You can delete it by running `kubectl delete pod
         tf-hub-0 -n=${NAMESPACE}`
 *    [Bringing up a
-Notebook](https://github.com/kubeflow/kubeflow/blob/master/user_guide.md#bringing-up-a-jupyter-notebook)
+Notebook](https://www.kubeflow.org/docs/guides/components/jupyter/#bringing-up-a-jupyter-notebook)
     *   When choosing an image for your cluster in the JupyterHub UI, use the
         image from this example:
         [`gcr.io/kubeflow-dev/issue-summarization-notebook-cpu:latest`](https://github.com/kubeflow/examples/blob/master/github_issue_summarization/workflow/Dockerfile).
